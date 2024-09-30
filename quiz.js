@@ -8,12 +8,12 @@ const checkAnswer = () => {
 
 	for (const radio of radios) {
 		if (radio.checked) {
-			userAnswer = radio.value;
+			userAnswer = Number(radio.value);
 			break;
 		}
 	}
 
-	if (correctAnswer === Number(userAnswer)) {
+	if (correctAnswer === userAnswer) {
 		feedbackEl.textContent = "Correct! Well done.";
 	} else {
 		feedbackEl.textContent = "That's incorrect. Try again!";
