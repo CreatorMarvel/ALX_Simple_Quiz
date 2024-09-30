@@ -1,5 +1,5 @@
 const btnEl = document.getElementById("submit-answer");
-const feedbackEl = document.querySelector(".feedback");
+const feedbackEl = document.querySelector("#feedback");
 
 const checkAnswer = () => {
 	const correctAnswer = 4;
@@ -13,9 +13,11 @@ const checkAnswer = () => {
 		}
 	}
 
-	correctAnswer === userAnswer
-		? (feedbackEl.textContent = "Correct! Well done.")
-		: (feedbackEl.textContent = "That's incorrect. Try again!");
+	if (correctAnswer === Number(userAnswer)) {
+		feedbackEl.textContent = "Correct! Well done.";
+	} else {
+		feedbackEl.textContent = "That's incorrect. Try again!";
+	}
 };
 
 btnEl.addEventListener("click", checkAnswer);
