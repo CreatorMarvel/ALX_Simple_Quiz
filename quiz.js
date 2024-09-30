@@ -13,7 +13,7 @@ const checkAnswer = () => {
 		}
 	}
 
-	if (correctAnswer === userAnswer) {
+	if (userAnswer === correctAnswer) {
 		feedbackEl.textContent = "Correct! Well done.";
 	} else {
 		feedbackEl.textContent = "That's incorrect. Try again!";
