@@ -1,5 +1,5 @@
 const btnEl = document.getElementById("submit-answer");
-const feedbackEl = document.getElementById("feedback");
+const feedbackEl = document.querySelector(".feedback");
 
 const checkAnswer = () => {
 	const correctAnswer = 4;
@@ -13,7 +13,7 @@ const checkAnswer = () => {
 		}
 	}
 
-	correctAnswer == userAnswer
+	correctAnswer === userAnswer
 		? (feedbackEl.textContent = "Correct! Well done.")
 		: (feedbackEl.textContent = "That's incorrect. Try again!");
 };
