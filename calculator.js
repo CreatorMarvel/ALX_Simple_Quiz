@@ -13,7 +13,7 @@ btnsEl.forEach((btn) => {
 				result = add(number1, number2);
 				break;
 			case "devide":
-				result = devide(number1, number2);
+				result = divide(number1, number2);
 				break;
 			case "multiply":
 				result = multiply(number1, number2);
@@ -41,6 +41,6 @@ function substract(number1, number2) {
 	return number1 - number2;
 }
 
-function devide(number1, number2) {
+function divide(number1, number2) {
 	return number1 / number2;
 }
